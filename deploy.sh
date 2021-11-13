@@ -11,8 +11,8 @@ docker push akintola/multi-server:$SHA
 docker push akintola/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployment/multi-client client=akintola/multi-client:$SHA
-kubectl set image deployment/multi-server server=akintola/multi-server:$SHA
-kubectl set image deployment/multi-worker worker=akintola/multi-worker:$SHA
+kubectl set image deployment/client-deployment client=akintola/multi-client:$SHA
+kubectl set image deployment/server-deployment server=akintola/multi-server:$SHA
+kubectl set image deployment/worker-deployment worker=akintola/multi-worker:$SHA
 
 
