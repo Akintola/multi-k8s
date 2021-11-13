@@ -2,9 +2,9 @@ docker build -t akintola/multi-client:latest -t akintola/multi-client:$SHA -f ./
 docker build -t akintola/multi-server:latest -t akintola/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t akintola/multi-worker:latest -t akintola/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
-docker push akintola/multi-client:latest
-docker push akintola/multi-server:latest
-docker push akintola/multi-worker:latest
+docker push akintola/multi-client
+docker push akintola/multi-server
+docker push akintola/multi-worker
 
 docker push akintola/multi-client:$SHA
 docker push akintola/multi-server:$SHA
